@@ -28,7 +28,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4">
           <p className="text-[10px] text-zinc-700 uppercase tracking-widest">
-            © 2024 TAMJID. ALL RIGHTS RESERVED.
+            © 2025 TAMJID. ALL RIGHTS RESERVED.
           </p>
           <div className="flex gap-8">
             <a href="#" className="text-[10px] text-zinc-700 hover:text-white uppercase tracking-widest transition-colors">Privacy Policy</a>

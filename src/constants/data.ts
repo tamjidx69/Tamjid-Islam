@@ -35,21 +35,21 @@ export const SERVICES: Service[] = [
   {
     id: '1',
     title: 'Thumbnail Design',
-    description: 'I design thumbnails for every niche, psychologically engineered to dominate the digital feed and skyrocket your CTR.',
+    description: 'I sell thumbnails for every niche, psychologically engineered to dominate the digital feed and skyrocket your CTR.',
     icon: 'Youtube',
     url: 'https://drive.google.com/drive/folders/1epRmUgfuINXWe7Flg9UDtfoQp7g_bW4-?usp=drive_link'
   },
   {
     id: '2',
     title: 'Poster Design',
-    description: 'I sell product posters for every product, combining editorial layout with premium visual storytelling for any brand.',
+    description: 'I sell product posters, meaning every product poster, combining premium visual storytelling with high-impact layouts.',
     icon: 'Image',
     url: 'https://drive.google.com/drive/folders/123fbxZB6Usi9fjbP8OPVcJt2uldSAlF5?usp=sharing'
   },
   {
     id: '3',
     title: 'Logo Design',
-    description: 'I create logos for each and every brand in every niche, crafting unique visual identities that establish authority.',
+    description: 'I sell logos for each and every brand in every niche, crafting unique visual identities that establish brand authority.',
     icon: 'Layers',
     url: 'https://drive.google.com/drive/folders/1XROjaG-Nb-rMXFStNld15woDnVXTbP_r?usp=sharing'
   }

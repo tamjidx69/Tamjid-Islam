@@ -9,7 +9,6 @@ import { useLenis } from './hooks/use-lenis';
 import { Preloader } from './components/sections/Preloader';
 import { Hero } from './components/sections/Hero';
 import { FloatingNav } from './components/ui/FloatingNav';
-import { Projects } from './components/sections/Projects';
 import { Services } from './components/sections/Services';
 import { CreativeProcess } from './components/sections/CreativeProcess';
 import { Skills } from './components/sections/Skills';
@@ -35,7 +34,6 @@ export default function App() {
             <FloatingNav />
             <Hero />
             <div className="relative z-10">
-              <Projects />
               <Services />
               <About />
               <CreativeProcess />

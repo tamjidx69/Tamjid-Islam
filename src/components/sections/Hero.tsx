@@ -8,121 +8,118 @@ export function Hero() {
   const opacity = useTransform(scrollY, [0, 800], [1, 0]);
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen pt-20 overflow-hidden bg-black">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black pt-20">
       {/* Background Gradients */}
       <div className="absolute inset-0 z-0">
         <div className="ambient-glow absolute top-[-200px] left-[-100px] w-[600px] h-[600px] pointer-events-none" />
         <div className="ambient-glow-2 absolute bottom-[-100px] right-[-100px] w-[500px] h-[500px] pointer-events-none" />
       </div>
 
-      <motion.div 
-        style={{ y: y1, opacity }}
-        className="relative z-10 flex flex-col items-center px-4 text-center"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="glass px-4 py-2 mb-8 rounded-full flex items-center gap-3"
-        >
-          <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-          <span className="text-[11px] font-medium tracking-widest text-white uppercase">
-            Available for premium projects
-          </span>
-        </motion.div>
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <motion.div 
+            style={{ y: y1, opacity }}
+            className="flex flex-col items-center text-center lg:items-start lg:text-left"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="glass mb-8 flex items-center gap-3 rounded-full px-4 py-2"
+            >
+              <div className="h-2 w-2 animate-pulse rounded-full bg-blue-500" />
+              <span className="text-[11px] font-medium uppercase tracking-widest text-white">
+                Available for premium projects
+              </span>
+            </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="max-w-5xl text-6xl font-black leading-[0.9] tracking-tighter text-white sm:text-8xl lg:text-[10rem] uppercase"
-        >
-          Designing <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/20">
-            Visual Legacy
-          </span>
-        </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="text-6xl font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-8xl lg:text-[7rem] xl:text-[8rem]"
+            >
+              Designing <br />
+              <span className="bg-gradient-to-r from-white via-white to-white/20 bg-clip-text text-transparent">
+                Visual Legacy
+              </span>
+            </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="max-w-xl mt-12 text-lg text-zinc-400 sm:text-xl font-light"
-        >
-          Crafting high-end creative visuals for elite creators and global brands. 
-          Thumbnail Design • Branding • Visual Storytelling
-        </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="mt-12 max-w-xl text-lg font-light text-zinc-400 sm:text-xl"
+            >
+              Crafting high-end creative visuals for elite creators and global brands. 
+              Thumbnail Design • Branding • Visual Storytelling
+            </motion.p>
 
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8, delay: 0.8 }}
-           className="flex flex-col items-center gap-10 mt-28 sm:flex-row"
-         >
-          <a href="https://www.behance.net/tamjidislam5" target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="group h-20 px-12 text-xl shadow-[0_0_40px_rgba(59,130,246,0.4)] hover:shadow-[0_0_60px_rgba(59,130,246,0.6)] transition-all">
-              View Behance
-              <ArrowRight className="ml-2 w-6 h-6 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </a>
-          <a href="https://wa.me/8801631950874" target="_blank" rel="noopener noreferrer">
-            <Button variant="glass" size="lg" className="group h-20 px-12 text-xl border-white/20 hover:bg-white/10 transition-all">
-              Contact Me
-            </Button>
-          </a>
-        </motion.div>
-      </motion.div>
+            <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.8, delay: 0.8 }}
+               className="mt-16 flex flex-col items-center gap-6 sm:flex-row lg:mt-20"
+             >
+              <a href="https://www.behance.net/tamjidislam5" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="group h-16 px-10 text-lg shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:shadow-[0_0_50px_rgba(59,130,246,0.5)] transition-all">
+                  View Behance
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </a>
+              <a href="https://wa.me/8801631950874" target="_blank" rel="noopener noreferrer">
+                <Button variant="glass" size="lg" className="group h-16 px-10 text-lg border-white/20 hover:bg-white/10 transition-all">
+                  Contact Me
+                </Button>
+              </a>
+            </motion.div>
+          </motion.div>
 
-      {/* Floating UI Elements */}
-      <motion.div
-        animate={{ 
-          y: [0, -20, 0],
-          rotate: [-2, 0, -2]
-        }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute hidden left-10 bottom-40 lg:block z-20"
-      >
-        <div className="glass p-6 rounded-3xl shadow-2xl">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(59,130,246,0.5)]">
-              <span className="font-extrabold text-white text-xl">3+</span>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="relative hidden lg:block"
+          >
+            <div className="relative aspect-[4/5] w-full max-w-[500px] overflow-hidden rounded-[60px] border border-white/10 glass p-3">
+              <img 
+                src="/input_file_5.png" 
+                alt="Tamjid Islam" 
+                className="h-full w-full rounded-[48px] object-cover grayscale-[0.2] transition-all duration-700 hover:grayscale-0 hover:scale-105"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
-            <div>
-              <p className="text-white font-bold text-sm tracking-tight">Years Work</p>
-              <p className="text-[10px] text-zinc-500 uppercase font-black">Experience</p>
-            </div>
-          </div>
+
+            {/* Float Badge */}
+            <motion.div
+              animate={{ y: [0, -20, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -left-12 bottom-20 z-20"
+            >
+              <div className="glass rounded-3xl p-6 shadow-2xl backdrop-blur-3xl">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600 shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+                    <span className="text-xl font-extrabold text-white">3+</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold tracking-tight text-white">Years Success</p>
+                    <p className="text-[10px] font-black uppercase text-zinc-500">Experience</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
-      </motion.div>
-      
-      <motion.div
-        animate={{ 
-          y: [0, 20, 0],
-          rotate: [3, 0, 3]
-        }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute hidden right-10 top-60 lg:block z-10"
-      >
-        <div className="glass p-6 rounded-3xl shadow-2xl translate-x-12">
-          <p className="text-[10px] font-black text-blue-500 mb-2 uppercase tracking-[0.2em]">Active Collaborations</p>
-          <div className="flex -space-x-2">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="w-10 h-10 rounded-full border-2 border-black bg-zinc-800" />
-            ))}
-            <div className="w-10 h-10 rounded-full border-2 border-black bg-blue-600 flex items-center justify-center text-[10px] font-bold text-white shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-              +150
-            </div>
-          </div>
-        </div>
-      </motion.div>
+      </div>
 
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator">
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-[20px] h-[35px] border-2 border-white/20 rounded-full flex justify-center"
+          className="flex h-[35px] w-[20px] justify-center rounded-full border-2 border-white/20"
         >
-          <div className="w-1 h-2 mt-2 bg-white rounded-full" />
+          <div className="mt-2 h-2 w-1 rounded-full bg-white" />
         </motion.div>
       </div>
     </section>

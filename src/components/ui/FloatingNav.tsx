@@ -4,7 +4,6 @@ import { Menu, X } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
 
 const NAV_ITEMS = [
-  { name: 'Works', href: '#projects' },
   { name: 'Services', href: '#services' },
   { name: 'Contact', href: '#contact' },
 ];

@@ -14,9 +14,9 @@ export function About() {
           >
             <div className="aspect-[4/5] rounded-[40px] overflow-hidden glass border-white/5 relative z-10 p-2">
                <img 
-                src="/input_file_0.png" 
+                src="/input_file_5.png" 
                 alt="Tamjid Portrait" 
-                className="w-full h-full object-cover rounded-[32px] opacity-90 transition-all duration-1000"
+                className="w-full h-full object-cover rounded-[32px] transition-all duration-1000 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
             </div>
