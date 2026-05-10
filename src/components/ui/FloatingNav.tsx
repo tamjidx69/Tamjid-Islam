@@ -33,8 +33,13 @@ export function FloatingNav() {
         )}
       >
         <div className="flex items-center gap-8">
-          <a href="#" className="w-10 h-10 glass flex items-center justify-center font-bold text-lg text-blue-500 rounded-full transition-all duration-300 hover:scale-110">
-            T
+          <a href="#" className="w-10 h-10 overflow-hidden glass flex items-center justify-center rounded-full transition-all duration-300 hover:scale-110 border border-white/10">
+            <img 
+              src="https://media.licdn.com/dms/image/v2/D4E03AQFgZ6-bEND_0Q/profile-displayphoto-crop_800_800/B4EZtHZCSOHEAI-/0/1766429308934?e=1779926400&v=beta&t=V9DfZTl7zM6SjIEf0IA4EiUARNfpM0LV6vBgzovc5xw" 
+              alt="Tamjid Logo" 
+              className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-500"
+              referrerPolicy="no-referrer"
+            />
           </a>
           <div className="hidden md:flex items-center gap-8">
             {NAV_ITEMS.map((item) => (
