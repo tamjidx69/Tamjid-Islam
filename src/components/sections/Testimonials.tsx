@@ -24,22 +24,26 @@ const TESTIMONIALS = [
 ];
 
 export function Testimonials() {
+  const smoothTransition = { duration: 1.2, ease: [0.22, 1, 0.36, 1] };
+
   return (
     <section className="py-32 bg-[#050505]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-24">
           <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ ...smoothTransition, delay: 0.1 }}
             className="text-xs font-medium tracking-[0.5em] text-blue-500 uppercase"
           >
             Digital Reputation
           </motion.span>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ ...smoothTransition, delay: 0.2 }}
             className="mt-6 text-5xl font-bold tracking-tighter text-white sm:text-7xl uppercase"
           >
             Elite Feedback
@@ -50,10 +54,10 @@ export function Testimonials() {
           {TESTIMONIALS.map((t, index) => (
             <motion.div
               key={t.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ ...smoothTransition, delay: index * 0.1 }}
             >
               <GlassCard className="h-full relative overflow-hidden group py-12" glow>
                 <div className="absolute top-0 right-0 p-8 text-blue-600/10 group-hover:text-blue-600/20 transition-colors">

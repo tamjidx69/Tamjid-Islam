@@ -7,6 +7,8 @@ export function Hero() {
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const opacity = useTransform(scrollY, [0, 800], [1, 0]);
 
+  const smoothTransition = { duration: 1.2, ease: [0.22, 1, 0.36, 1] };
+
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-black pt-20">
       {/* Background Gradients */}
@@ -24,7 +26,7 @@ export function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ ...smoothTransition, delay: 0.2 }}
               className="glass mb-8 flex items-center gap-3 rounded-full px-4 py-2"
             >
               <div className="h-2 w-2 animate-pulse rounded-full bg-blue-500" />
@@ -34,9 +36,9 @@ export function Hero() {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
+              transition={{ ...smoothTransition, delay: 0.4 }}
               className="text-6xl font-black uppercase leading-[0.9] tracking-tighter text-white sm:text-8xl lg:text-[7rem] xl:text-[8rem]"
             >
               Designing <br />
@@ -46,9 +48,9 @@ export function Hero() {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...smoothTransition, delay: 0.6 }}
               className="mt-12 max-w-xl text-lg font-light text-zinc-400 sm:text-xl"
             >
               Crafting high-end creative visuals for elite creators and global brands. 
@@ -58,12 +60,12 @@ export function Hero() {
             <motion.div
                initial={{ opacity: 0, y: 20 }}
                animate={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.8, delay: 0.8 }}
+               transition={{ ...smoothTransition, delay: 0.8 }}
                className="mt-16 flex flex-col items-center gap-6 sm:flex-row lg:mt-20"
              >
               <a href="https://www.behance.net/tamjidislam5" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="group h-16 px-10 text-lg shadow-[0_0_30px_rgba(59,130,246,0.3)] hover:shadow-[0_0_50px_rgba(59,130,246,0.5)] transition-all">
-                  View Behance
+                <Button size="lg" className="group h-16 px-10 text-lg shadow-[0_0_40px_rgba(59,130,246,0.5)] hover:shadow-[0_0_60px_rgba(59,130,246,0.7)] transition-all bg-white text-black hover:bg-zinc-200">
+                  View My Works
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
               </a>
@@ -76,16 +78,16 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            initial={{ opacity: 0, scale: 0.95, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ ...smoothTransition, delay: 0.5 }}
             className="relative hidden lg:block"
           >
             <div className="relative aspect-[4/5] w-full max-w-[500px] overflow-hidden rounded-[60px] border border-white/10 glass p-3">
               <img 
-                src="/input_file_5.png" 
+                src="https://media.licdn.com/dms/image/v2/D4E03AQFgZ6-bEND_0Q/profile-displayphoto-crop_800_800/B4EZtHZCSOHEAI-/0/1766429308934?e=1779926400&v=beta&t=V9DfZTl7zM6SjIEf0IA4EiUARNfpM0LV6vBgzovc5xw" 
                 alt="Tamjid Islam" 
-                className="h-full w-full rounded-[48px] object-cover grayscale-[0.2] transition-all duration-700 hover:grayscale-0 hover:scale-105"
+                className="h-full w-full rounded-[48px] object-cover contrast-[1.05] brightness-[1.05] transition-all duration-1000 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -93,8 +95,8 @@ export function Hero() {
 
             {/* Float Badge */}
             <motion.div
-              animate={{ y: [0, -20, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -left-12 bottom-20 z-20"
             >
               <div className="glass rounded-3xl p-6 shadow-2xl backdrop-blur-3xl">
