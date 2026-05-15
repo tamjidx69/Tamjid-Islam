@@ -5,6 +5,7 @@
 
 import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useLenis } from './hooks/use-lenis';
 import { Preloader } from './components/sections/Preloader';
 import { Hero } from './components/sections/Hero';
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <main className="relative min-h-screen bg-black overflow-x-hidden font-sans selection:bg-blue-600 selection:text-white">
       <CustomCursor />
+      <SpeedInsights />
       
       <AnimatePresence mode="wait">
         {loading ? (
