@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { GlassCard } from '../ui/GlassCard';
+import tamjidPortrait from '../../assets/images/tamjid_portrait.png';
 
 export function About() {
   const smoothTransition = { duration: 1.2, ease: [0.22, 1, 0.36, 1] };
@@ -17,7 +18,7 @@ export function About() {
           >
             <div className="aspect-[4/5] rounded-[40px] overflow-hidden glass border-white/5 relative z-10 p-2">
                <img 
-                src="https://media.licdn.com/dms/image/v2/D4E03AQFgZ6-bEND_0Q/profile-displayphoto-crop_800_800/B4EZtHZCSOHEAI-/0/1766429308934?e=1779926400&v=beta&t=V9DfZTl7zM6SjIEf0IA4EiUARNfpM0LV6vBgzovc5xw" 
+                src={tamjidPortrait} 
                 alt="Tamjid Portrait" 
                 className="w-full h-full object-cover rounded-[32px] contrast-[1.05] brightness-[1.05] transition-all duration-1000 hover:scale-105"
                 referrerPolicy="no-referrer"

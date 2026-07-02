@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '../ui/Button';
+import tamjidPortrait from '../../assets/images/tamjid_portrait.png';
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -85,7 +86,7 @@ export function Hero() {
           >
             <div className="relative aspect-[4/5] w-full max-w-[500px] overflow-hidden rounded-[60px] border border-white/10 glass p-3">
               <img 
-                src="https://media.licdn.com/dms/image/v2/D4E03AQFgZ6-bEND_0Q/profile-displayphoto-crop_800_800/B4EZtHZCSOHEAI-/0/1766429308934?e=1779926400&v=beta&t=V9DfZTl7zM6SjIEf0IA4EiUARNfpM0LV6vBgzovc5xw" 
+                src={tamjidPortrait} 
                 alt="Tamjid Islam" 
                 className="h-full w-full rounded-[48px] object-cover contrast-[1.05] brightness-[1.05] transition-all duration-1000 hover:scale-105"
                 referrerPolicy="no-referrer"
